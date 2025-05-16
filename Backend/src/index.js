@@ -7,7 +7,10 @@ const { recipesRouter } = require("./routes/recipes");
 const app = express();
 
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+  origin: ['http://localhost:5173', 'https://your-frontend.vercel.app'],
+}));
+
 
 app.use("/auth", userRouter);
 app.use("/recipes", recipesRouter);
