@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useCookies } from "react-cookie";
-import logo from "../assets/logo.png";
+import logo from "/assets/logo.png";
 
 export const Navbar = () => {
   const [cookies, setCookies] = useCookies(["access_token"]);

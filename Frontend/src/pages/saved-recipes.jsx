@@ -3,10 +3,10 @@ import { useGetUserID } from "../hooks/useGetUserID";
 import axios from "axios";
 
 // Import asset images
-import deleteIcon from "../assets/delete.png";
-import afterSave from "../assets/aftersave.png";
-import cancelIcon from "../assets/cancel.png";
-import stepImage from "../assets/next.png";
+import deleteIcon from "/assets/delete.png";
+import afterSave from "/assets/aftersave.png";
+import cancelIcon from "/assets/cancel.png";
+import stepImage from "/assets/next.png";
 
 export const SavedRecipes = () => {
   const [savedRecipes, setSavedRecipes] = useState([]);

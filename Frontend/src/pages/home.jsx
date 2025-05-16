@@ -2,11 +2,11 @@ import React, { useEffect, useState } from "react";
 import { useGetUserID } from "../hooks/useGetUserID";
 import axios from "axios";
 
-import beforeSave from "../assets/beforesave.png";
-import afterSave from "../assets/aftersave.png";
-import deleteIcon from "../assets/delete.png";
-import cancelIcon from "../assets/cancel.png";
-import stepImage from "../assets/next.png";
+import beforeSave from "/assets/beforeSave.png";
+import afterSave from "/assets/aftersave.png";
+import deleteIcon from "/assets/delete.png";
+import cancelIcon from "/assets/cancel.png";
+import stepImage from "/assets/next.png";
 
 export const Home = () => {
   const [recipes, setRecipes] = useState([]);
