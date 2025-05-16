@@ -30,12 +30,12 @@ const Login = ({ switchToRegister }) => {
       return;
     }
     try {
-      const result = await axios.post("https://leftovermagic-recipesharingapplication.onrender.com/auth/login", {
+      const result = await axios.post("https://leftovermagic-recipesharing-application.onrender.com/auth/login", {
         username,
         password,
       });
       setCookies("access_token", result.data.token);
-      window.localStorage.setItem("userID", result.data.userID);
+      window.localStorage.setItem("userID", result.data.userID);render
       navigate("/");
     } catch (error) {
       if (error.response && error.response.data && error.response.data.message) {
@@ -109,7 +109,7 @@ const Register = ({ switchToLogin }) => {
       return;
     }
     try {
-      await axios.post("https://leftovermagic-recipesharingapplication.onrender.com/auth/register", {
+      await axios.post("https://leftovermagic-recipesharing-application.onrender.com/auth/register", {
         username,
         password,
       });

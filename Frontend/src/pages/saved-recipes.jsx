@@ -17,7 +17,7 @@ export const SavedRecipes = () => {
     const fetchSavedRecipes = async () => {
       try {
         const response = await axios.get(
-          `https://leftovermagic-recipesharingapplication.onrender.com/recipes/savedRecipes/${userID}`
+          `https://leftovermagic-recipesharing-application.onrender.com/recipes/savedRecipes/${userID}`
         );
         setSavedRecipes(response.data.savedRecipes);
       } catch (err) {
@@ -33,7 +33,7 @@ export const SavedRecipes = () => {
     if (!confirmDelete) return;
 
     try {
-      await axios.delete(`https://leftovermagic-recipesharingapplication.onrender.com1/recipes/${recipeId}`);
+      await axios.delete(`https://leftovermagic-recipesharing-application.onrender.com1/recipes/${recipeId}`);
       setSavedRecipes(savedRecipes.filter((recipe) => recipe._id !== recipeId));
     } catch (err) {
       console.error("Error deleting recipe:", err);
@@ -42,7 +42,7 @@ export const SavedRecipes = () => {
 
   const unsaveRecipe = async (recipeId) => {
     try {
-      await axios.put("https://leftovermagic-recipesharingapplication.onrender.com/recipes/unsave", {
+      await axios.put("https://leftovermagic-recipesharing-application.onrender.com/recipes/unsave", {
         recipeID: recipeId,
         userID,
       });

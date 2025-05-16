@@ -60,7 +60,7 @@ if (recipe.cookingTime <= 0) newErrors.cookingTime = "Cooking time must be great
 
     try {
       await axios.post(
-        "https://leftovermagic-recipesharingapplication.onrender.com/recipes",
+        "https://leftovermagic-recipesharing-application.onrender.com/recipes",
         { ...recipe },
         {
           headers: { authorization: cookies.access_token },
